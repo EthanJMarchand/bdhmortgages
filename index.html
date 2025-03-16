@@ -152,7 +152,7 @@
     }
       const form = document.getElementById('rateForm');
         form.addEventListener('submit', function(e) {
-            
+            e.preventDefault();
             // Simple form validation
             const phone = document.getElementById('phone').value;
             const name = document.getElementById('name').value;
@@ -163,6 +163,7 @@
                 // For this demo, we'll just show a success message
                 const message = document.getElementById('formMessage');
                 message.classList.remove('hidden');
+                e.submit()
                 // Reset form
                 this.reset();
                 
