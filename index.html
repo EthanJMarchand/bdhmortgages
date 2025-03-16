@@ -141,9 +141,8 @@
             return false; // Email is invalid
         }
     }
-
-        document.getElementById('rateForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+      const form = document.getElementById('rateForm');
+        form.addEventListener('submit', function(e) {
             
             // Simple form validation
             const phone = document.getElementById('phone').value;
@@ -151,12 +150,11 @@
             const email = document.getElementById('email').value;
             const cleanPhoneNumber = phone.replace(/\D/g, '');
             
-            if (cleanPhoneNumber.length >= 10 && cleanPhoneNumber.length <= 11 && name.trim() && isValidEmail(email.trim())) {
+            if (cleanPhoneNumber.length > 9 && cleanPhoneNumber.length < 12 && name.trim() && isValidEmail(email.trim())) {
                 // Here you would typically send the data to a server
                 // For this demo, we'll just show a success message
                 const message = document.getElementById('formMessage');
                 message.classList.remove('hidden');
-                
                 // Reset form
                 this.reset();
                 
@@ -165,6 +163,7 @@
                     message.classList.add('hidden');
                 }, 3000);
             } else {
+              e.preventDefault();
                 alert('A valid phone number and email is required');
             }
         });
