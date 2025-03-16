@@ -56,7 +56,7 @@
                       <div class="sm:col-span-4">
                         <label for="phone" class="block text-sm/6 font-medium text-gray-900">Phone</label>
                         <div class="mt-2">
-                          <input required id="phone" name="phone" type="phone" autocomplete="phone" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                          <input required id="phone" name="phone" type="tel" autocomplete="phone" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
                       </div>
 
@@ -141,6 +141,15 @@
             return false; // Email is invalid
         }
     }
+    function isValidPhoneNumber(phone) {
+        // Regular expression for basic phone number validation
+        const cleanPhoneNumber = phone.replace(/\D/g, '');
+        if (cleanPhoneNumber.length > 9 && cleanPhoneNumber.length < 12) {
+            return true;  // Phone number is valid
+        } else {
+            return false; // Phone number is invalid
+        }
+    }
       const form = document.getElementById('rateForm');
         form.addEventListener('submit', function(e) {
             
@@ -148,9 +157,8 @@
             const phone = document.getElementById('phone').value;
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const cleanPhoneNumber = phone.replace(/\D/g, '');
             
-            if (cleanPhoneNumber.length > 9 && cleanPhoneNumber.length < 12 && name.trim() && isValidEmail(email.trim())) {
+            if (isValidPhoneNumber() && name.trim() && isValidEmail(email.trim())) {
                 // Here you would typically send the data to a server
                 // For this demo, we'll just show a success message
                 const message = document.getElementById('formMessage');
