@@ -158,7 +158,7 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             
-            if (isValidPhoneNumber() && name.trim() && isValidEmail(email.trim())) {
+            if (isValidPhoneNumber(phone) && name.trim() && isValidEmail(email.trim())) {
                 // Here you would typically send the data to a server
                 // For this demo, we'll just show a success message
                 const message = document.getElementById('formMessage');
