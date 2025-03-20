@@ -69,6 +69,18 @@
                     </div>
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                       <div class="sm:col-span-4">
+                        <label for="preferred_contact_method" class="block text-sm/6 font-medium text-gray-900">Preferred Contact Method</label>
+                        <div class="mt-2">
+                          <select id="preferred_contact_method" name="preferred_contact_method" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="text">Text</option>
+                            <option value="call">Call</option>
+                            <option value="email">Email</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div class="sm:col-span-4">
                         <label for="occupancy" class="block text-sm/6 font-medium text-gray-900">Who will be occupying the home?</label>
                         <div class="mt-2">
                           <select id="occupancy" name="occupancy" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
@@ -96,9 +108,9 @@
                         <label for="credit_score" class="block text-sm/6 font-medium text-gray-900">Hows your credit?</label>
                         <div class="mt-2">
                           <select id="credit_score" name="credit_score" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                            <option value="search-engine">Good</option>
-                            <option value="social-media">Average</option>
-                            <option value="referral">Poor</option>
+                            <option value="good">Good</option>
+                            <option value="average">Average</option>
+                            <option value="poor">Poor</option>
                           </select>
                         </div>
                       </div>
