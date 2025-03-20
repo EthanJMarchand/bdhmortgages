@@ -67,26 +67,41 @@
                         </div>
                       </div>
                     </div>
-                  <div class="border-b border-gray-900/10 py-12">
-                
-                      <fieldset>
-                        <legend class="text-sm/6 font-semibold text-gray-900">Preferred Contact Method</legend>
-                        <p class="mt-1 text-sm/6 text-gray-600">By submitting this form, you consent to be contacted from us. You can unsubscribe anytime.</p>
-                        <div class="mt-6 space-y-6">
-                          <div class="flex items-center gap-x-3">
-                            <input id="text" name="push-notifications" type="radio" checked class="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
-                            <label for="text" class="block text-sm/6 font-medium text-gray-900">Text</label>
-                          </div>
-                          <div class="flex items-center gap-x-3">
-                            <input id="call" name="push-notifications" type="radio" class="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
-                            <label for="call" class="block text-sm/6 font-medium text-gray-900">Call</label>
-                          </div>
-                          <div class="flex items-center gap-x-3">
-                            <input id="email" name="push-notifications" type="radio" class="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden">
-                            <label for="email" class="block text-sm/6 font-medium text-gray-900">Email</label>
-                          </div>
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div class="sm:col-span-4">
+                        <label for="occupancy" class="block text-sm/6 font-medium text-gray-900">Who will be occupying the home?</label>
+                        <div class="mt-2">
+                          <select id="occupancy" name="occupancy" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="owner occupied">Owner Occupied</option>
+                            <option value="tenant">Tenant</option>
+                            <option value="family">Family</option>
+                          </select>
                         </div>
-                      </fieldset>
+                      </div>
+                    </div>
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div class="sm:col-span-4">
+                        <label for="down_payment" class="block text-sm/6 font-medium text-gray-900">Down Payment</label>
+                        <div class="mt-2">
+                          <select id="down_payment" name="down_payment" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="5%">5%</option>
+                            <option value="10% - 15%">10% - 15%</option>
+                            <option value="20% or more">20% or more</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div class="sm:col-span-4">
+                        <label for="credit_score" class="block text-sm/6 font-medium text-gray-900">Hows your credit?</label>
+                        <div class="mt-2">
+                          <select id="credit_score" name="credit_score" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="search-engine">Good</option>
+                            <option value="social-media">Average</option>
+                            <option value="referral">Poor</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
