@@ -1,206 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
-    <title>Request Your Mortgage Rate - Brittany Dayle Mortgage</title>
-    <link rel="stylesheet" href="assets/css/output.css">
-    <style>
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        .custom-container {
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <title>Request Your Mortgage Rate - Brittany Dayle Mortgage</title>
+  <link rel="stylesheet" href="assets/css/output.css">
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .custom-container {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  </style>
 </head>
+
 <body class="bg-gray-100 font-sans">
-    <!-- Header -->
-    <header class="bg-teal-200 py-6 shadow">
-        <div class="custom-container">
-            <h1 class="text-2xl md:text-3xl font-bold text-center text-teal-900">Request a Tailored Mortgage Rate</h1>
-            <p class="text-center mt-2 text-sm md:text-base text-teal-600">Rates vary based on factors like credit, loan type, and more. Share your details below, and I’ll provide a reliable, personalized quote you can trust.</p>
-            <p class="text-center pt-6"><a  class="mr-5 py-2 px-3 rounded bg-rose-500 hover:bg-rose-400 text-white font-bold" href="mailto:mortgages@brittanydayle.ca?subject=Mortgage%20Rate%20Inquiry&body=Hey%20Brittany!%0A%0AI'm%20inquiring%20today%20about%20mortgage%20rates.">Email Brittany</a><a class="ml-5 py-2 px-3 rounded bg-rose-500 hover:bg-rose-400 text-white font-bold" href="sms:+17809657755?body=Hey%20Brittany!">Text Brittany</a></p>
-        </div>
-    </header>
+  <!-- Header -->
+  <header class="bg-teal-200 py-6 shadow">
+    <div class="custom-container">
+      <h1 class="text-2xl md:text-3xl font-bold text-center text-teal-900">Request a Tailored Mortgage Rate</h1>
+      <p class="text-center mt-2 text-sm md:text-base text-teal-600">Rates vary based on factors like credit, loan type,
+        and more. Share your details below, and I’ll provide a reliable, personalized quote you can trust.</p>
+      <p class="text-center pt-6"><a class="mr-5 py-2 px-3 rounded bg-rose-500 hover:bg-rose-400 text-white font-bold"
+          href="mailto:mortgages@brittanydayle.ca?subject=Mortgage%20Rate%20Inquiry&body=Hey%20Brittany!%0A%0AI'm%20inquiring%20today%20about%20mortgage%20rates.">Email
+          Brittany</a><a class="ml-5 py-2 px-3 rounded bg-rose-500 hover:bg-rose-400 text-white font-bold"
+          href="sms:+17809657755?body=Hey%20Brittany!">Text Brittany</a></p>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="custom-container py-8">
-        <!-- Form Section -->
-        <section class="bg-white rounded-lg shadow-lg p-6 mb-8 fade-in">
-            <form id="rateForm" name="contact" method="POST" data-netlify="true">
-                <div class="space-y-12">
-                  <div class=" border-gray-900/10">
-                    <h2 class="text-base/7 font-semibold text-gray-900">Personal Information</h2>
-                    <p class="mt-1 text-sm/6 text-gray-600">Hey, your info's safe with me—I'm not here to pull any funny business. I'll only use it the way you'd expect and nothing more!</p>
-              
-                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                      <div class="sm:col-span-4">
-                        <label for="name" class="block text-sm/6 font-medium text-gray-900">Name</label>
-                        <div class="mt-2">
-                          <input required type="text" name="name" id="name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
-                        </div>
-                      </div>
-              
-                      <div class="sm:col-span-4">
-                        <label for="phone" class="block text-sm/6 font-medium text-gray-900">Phone</label>
-                        <div class="mt-2">
-                          <input required id="phone" name="phone" type="tel" autocomplete="phone" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
-                        </div>
-                      </div>
+  <!-- Main Content -->
+  <main class="custom-container py-8">
+    <!-- Form Section -->
+    <section class="bg-white rounded-lg shadow-lg p-6 mb-8 fade-in">
+      <form id="rateForm" name="contact" method="POST" data-netlify="true">
+        <div class="space-y-12">
+          <div class=" border-gray-900/10">
+            <h2 class="text-base/7 font-semibold text-gray-900">Personal Information</h2>
+            <p class="mt-1 text-sm/6 text-gray-600">Hey, your info's safe with me—I'm not here to pull any funny
+              business. I'll only use it the way you'd expect and nothing more!</p>
 
-                      <div class="sm:col-span-4">
-                        <label for="email" class="block text-sm/6 font-medium text-gray-900">Email</label>
-                        <div class="mt-2">
-                          <input required id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                      <div class="sm:col-span-4">
-                        <label for="preferred_contact_method" class="block text-sm/6 font-medium text-gray-900">Preferred Contact Method</label>
-                        <div class="mt-2">
-                          <select id="preferred_contact_method" name="preferred_contact_method" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
-                            <option value="text">Text</option>
-                            <option value="call">Call</option>
-                            <option value="email">Email</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                      <div class="sm:col-span-4">
-                        <label for="occupancy" class="block text-sm/6 font-medium text-gray-900">Who will be occupying the home?</label>
-                        <div class="mt-2">
-                          <select id="occupancy" name="occupancy" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
-                            <option value="owner occupied">Owner Occupied</option>
-                            <option value="tenant">Tenant</option>
-                            <option value="family">Family</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                      <div class="sm:col-span-4">
-                        <label for="down_payment" class="block text-sm/6 font-medium text-gray-900">Down Payment</label>
-                        <div class="mt-2">
-                          <select id="down_payment" name="down_payment" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
-                            <option value="5%">5%</option>
-                            <option value="10% - 15%">10% - 15%</option>
-                            <option value="20% or more">20% or more</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                      <div class="sm:col-span-4">
-                        <label for="credit_score" class="block text-sm/6 font-medium text-gray-900">Hows your credit?</label>
-                        <div class="mt-2">
-                          <select id="credit_score" name="credit_score" class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
-                            <option value="good">Good</option>
-                            <option value="average">Average</option>
-                            <option value="poor">Poor</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label for="name" class="block text-sm/6 font-medium text-gray-900">Name</label>
+                <div class="mt-2">
+                  <input required type="text" name="name" id="name" autocomplete="given-name"
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
                 </div>
-              
-                <div class="mt-6 flex items-center justify-end gap-x-6">
-                  <button type="submit" class="rounded-md bg-rose-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-rose-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500">Send</button>
+              </div>
+
+              <div class="sm:col-span-4">
+                <label for="phone" class="block text-sm/6 font-medium text-gray-900">Phone</label>
+                <div class="mt-2">
+                  <input required id="phone" name="phone" type="tel" autocomplete="phone"
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
                 </div>
-              </form>
-              
-            <p id="formMessage" class="mt-2 text-center text-sm text-green-600 hidden">Request sent!</p>
-        </section>
+              </div>
 
-        <!-- Additional Content Section -->
-        <section class="grid md:grid-cols-2 gap-6">
-            <!-- Testimonial -->
-            <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">What Our Clients Say</h3>
-                <p class="text-gray-600 italic">"I got my rate in minutes and closed my mortgage faster than I thought possible!"</p>
-                <p class="mt-2 text-sm text-gray-500">- Sarah M., Happy Homeowner</p>
+              <div class="sm:col-span-4">
+                <label for="email" class="block text-sm/6 font-medium text-gray-900">Email</label>
+                <div class="mt-2">
+                  <input required id="email" name="email" type="email" autocomplete="email"
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
+                </div>
+              </div>
             </div>
-
-            <!-- Quick Facts -->
-            <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Why Choose Us?</h3>
-                <ul class="list-disc pl-5 text-gray-600">
-                    <li>Competitive rates tailored to you</li>
-                    <li>Fast responses - usually within hours</li>
-                    <li>Experienced brokers with 15+ years</li>
-                    <li>No hidden fees or surprises</li>
-                </ul>
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label for="preferred_contact_method" class="block text-sm/6 font-medium text-gray-900">Preferred
+                  Contact Method</label>
+                <div class="mt-2">
+                  <select id="preferred_contact_method" name="preferred_contact_method"
+                    class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
+                    <option value="text">Text</option>
+                    <option value="call">Call</option>
+                    <option value="email">Email</option>
+                  </select>
+                </div>
+              </div>
             </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-teal-200 text-teal-900 py-6">
-        <div class="custom-container text-center">
-            <p>© <script>document.write(new Date().getFullYear())</script> Brittany Dayle Heinrichs Dominion Lending Centeres Maximal Mortgages. All rights reserved.</p>
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label for="occupancy" class="block text-sm/6 font-medium text-gray-900">Who will be occupying the
+                  home?</label>
+                <div class="mt-2">
+                  <select id="occupancy" name="occupancy"
+                    class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
+                    <option value="owner occupied">Owner Occupied</option>
+                    <option value="tenant">Tenant</option>
+                    <option value="family">Family</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label for="down_payment" class="block text-sm/6 font-medium text-gray-900">Down Payment</label>
+                <div class="mt-2">
+                  <select id="down_payment" name="down_payment"
+                    class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
+                    <option value="5%">5%</option>
+                    <option value="10% - 15%">10% - 15%</option>
+                    <option value="20% or more">20% or more</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-4">
+                <label for="credit_score" class="block text-sm/6 font-medium text-gray-900">Hows your credit?</label>
+                <div class="mt-2">
+                  <select id="credit_score" name="credit_score"
+                    class="block w-full rounded-md bg-white px-3 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-rose-500 sm:text-sm/6">
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
 
-    <!-- JavaScript -->
-    <script>
-            function isValidEmail(email) {
-        // Regular expression for basic email validation
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        
-        if (emailPattern.test(email)) {
-            return true;  // Email is valid
-        } else {
-            return false; // Email is invalid
+        <div class="mt-6 flex items-center justify-end gap-x-6">
+          <button type="submit"
+            class="rounded-md bg-rose-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-rose-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-500">Send</button>
+        </div>
+      </form>
+
+      <p id="formMessage" class="mt-2 text-center text-sm text-green-600 hidden">Request sent!</p>
+    </section>
+
+    <!-- Additional Content Section -->
+    <section class="grid md:grid-cols-2 gap-6">
+      <!-- Testimonial -->
+      <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+        <!-- HTML Structure -->
+
+        <div class="max-w-2xl mx-auto">
+          <div class="relative bg-white shadow-lg rounded-lg p-6 overflow-hidden">
+            <div id="testimonial-container" class="relative min-h-[150px]"></div>
+            <div id="dots-container" class="flex justify-center gap-2 mt-4"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Facts -->
+      <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Why Choose Us?</h3>
+        <ul class="list-disc pl-5 text-gray-600">
+          <li>Competitive rates tailored to you</li>
+          <li>Fast responses - usually within hours</li>
+          <li>Experienced brokers with 15+ years</li>
+          <li>No hidden fees or surprises</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-teal-200 text-teal-900 py-6">
+    <div class="custom-container text-center">
+      <p>©
+        <script>document.write(new Date().getFullYear())</script> Brittany Dayle Heinrichs Dominion Lending Centeres
+        Maximal Mortgages. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // JavaScript
+
+
+    const testimonials = [
+      {
+        quote: "Brittany is truly a master of her craft. My wife and I came to Brittany seeking urgent assistance following a disappointing experience with another broker. Brittany worked tirelessly to ensure we got the best financing available to us. We're thrilled with our rate and couldn't be more happy with the service! I recommend Brittany to anyone that will listen. 10/10.",
+        author: "Daniel H.",
+        role: "Happy Customer"
+      },
+      {
+        quote: "Brittany helped me with my first mortgage and I felt so safe in her hands! She walked me through every step of the way, was available when I needed her, and checked in with me frequently. I can’t recommend her enough!!",
+        author: "Kelly N.",
+        role: "Happy Customer"
+      },
+      {
+        quote: "Brittany helped me with my first mortgage and made the entire process easy and seamless! She was professional, patient and always available to answer any questions I had. It was a pleasure to get to know her and I will recommend to her to all my friends and family. Thanks for all your help Brittany! :)",
+        author: "Sally M",
+        role: "Happy Customer"
+      },
+      {
+        quote: "This was our second time using Brittany's services and she did not disappoint! She provided us with multiple options and walked through scenarios with us to find the right fit. I'd recommend her to anyone (and always do)!",
+        author: "Lindsay K",
+        role: "Happy Customer"
+      },
+      {
+        quote: "A true professional. Brittany was the most reliable and organized individual I worked with throughout my entire home purchase. Very accommodating to people new to the buying process.",
+        author: "William M",
+        role: "Happy Customer"
+      },
+      {
+        quote: "This was my first time buying a house... and needless to say it was a steep learning curve. Brittany and all her recommendations for a realtor (Ethan Marchand), and lawyer (James Pittaway), were all amazing to deal with. They were all very informative, responsive, and just overall really helpful/pleasant to deal with in all their areas! They were always quick to help answer any questions/concerns I had. And would go above and beyond on the whole process. And overall after 6 months of owning this awesome house, I'm still just as happy as when I bought it! Would 100% recommend them all to anyone else in the market",
+        author: "Joshua L",
+        role: "Happy Customer"
+      },
+      {
+        quote: "I went into the home buying process without any background knowledge. Brittany helped me every step of the way and was always available to answer all my silly questions, even when they didn't involve her area of expertise. I would highly recommend Brittany to anyone looking to purchase a home.",
+        author: "Sean K",
+        role: "Happy Customer"
+      },
+      {
+        quote: "Our experience regarding our mortgage transfer went very smoothly - Brittany was very helpful, knowledgeable and always available either by phone or email right up to when our first payment came through with our new mortgage lender. I would highly recommend her - and in fact we did refer our son who also transferred his mortgage - so thanks again Brittany!!",
+        author: "Cynthia C",
+        role: "Happy Customer"
+      },
+      // Add more testimonials here as needed
+    ];
+
+    class TestimonialRotator {
+      constructor() {
+        this.container = document.getElementById('testimonial-container');
+        this.dotsContainer = document.getElementById('dots-container');
+        this.currentIndex = 0;
+        this.intervalId = null;
+
+        if (!this.container || !this.dotsContainer) {
+          console.error('Container elements not found');
+          return;
         }
+
+        this.init();
+      }
+
+      init() {
+        this.renderTestimonials();
+        this.createDots();
+        this.startRotation();
+
+        // Add hover pause
+        this.container.parentElement.addEventListener('mouseenter', () => this.pauseRotation());
+        this.container.parentElement.addEventListener('mouseleave', () => this.startRotation());
+      }
+
+      renderTestimonials() {
+        this.container.innerHTML = testimonials.map((t, index) => `
+      <div class="testimonial-card w-full transition-opacity duration-500 absolute top-0 left-0"
+           style="display: ${index === 0 ? 'block' : 'none'}"
+           data-index="${index}">
+        <p class="text-gray-600 italic mb-4">"${t.quote}"</p>
+        <div class="flex items-center">
+          <div>
+            <p class="font-semibold text-gray-800">${t.author}</p>
+            <p class="text-sm text-gray-500">${t.role}</p>
+          </div>
+        </div>
+      </div>
+    `).join('');
+      }
+
+      createDots() {
+        this.dotsContainer.innerHTML = testimonials.map((_, index) => `
+      <button class="w-2 h-2 rounded-full ${index === 0 ? 'bg-gray-800' : 'bg-gray-300'}" 
+              data-index="${index}"></button>
+    `).join('');
+
+        this.dotsContainer.addEventListener('click', (e) => {
+          const dot = e.target.closest('button');
+          if (dot) {
+            const index = parseInt(dot.dataset.index);
+            this.showTestimonial(index);
+          }
+        });
+      }
+
+      showTestimonial(index) {
+        if (index === this.currentIndex) return;
+
+        const cards = this.container.querySelectorAll('.testimonial-card');
+        const dots = this.dotsContainer.querySelectorAll('button');
+
+        // Hide current card
+        cards[this.currentIndex].style.display = 'none';
+        dots[this.currentIndex].classList.remove('bg-gray-800');
+        dots[this.currentIndex].classList.add('bg-gray-300');
+
+        // Show new card
+        cards[index].style.display = 'block';
+        dots[index].classList.remove('bg-gray-300');
+        dots[index].classList.add('bg-gray-800');
+
+        this.currentIndex = index;
+      }
+
+      startRotation() {
+        this.intervalId = setInterval(() => {
+          const nextIndex = (this.currentIndex + 1) % testimonials.length;
+          this.showTestimonial(nextIndex);
+        }, 5000);
+      }
+
+      pauseRotation() {
+        clearInterval(this.intervalId);
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        new TestimonialRotator();
+      } catch (error) {
+        console.error('Error initializing testimonial rotator:', error);
+      }
+    });
+
+
+    function isValidEmail(email) {
+      // Regular expression for basic email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (emailPattern.test(email)) {
+        return true;  // Email is valid
+      } else {
+        return false; // Email is invalid
+      }
     }
     function isValidPhoneNumber(phone) {
-        // Regular expression for basic phone number validation
-        const cleanPhoneNumber = phone.replace(/\D/g, '');
-        if (cleanPhoneNumber.length > 9 && cleanPhoneNumber.length < 12) {
-            return true;  // Phone number is valid
-        } else {
-            return false; // Phone number is invalid
-        }
+      // Regular expression for basic phone number validation
+      const cleanPhoneNumber = phone.replace(/\D/g, '');
+      if (cleanPhoneNumber.length > 9 && cleanPhoneNumber.length < 12) {
+        return true;  // Phone number is valid
+      } else {
+        return false; // Phone number is invalid
+      }
     }
-      const form = document.getElementById('rateForm');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Simple form validation
-            const phone = document.getElementById('phone').value;
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            
-            if (isValidPhoneNumber(phone) && name.trim() && isValidEmail(email.trim())) {
-                // Here you would typically send the data to a server
-                // For this demo, we'll just show a success message
-                const message = document.getElementById('formMessage');
-                message.classList.remove('hidden');
-                form.submit();
-                
-                // Hide message after 3 seconds
-                setTimeout(() => {
-                    message.classList.add('hidden');
-                }, 3000);
-            } else {
-              e.preventDefault();
-                alert('A valid phone number and email is required');
-            }
-        });
-    </script>
+    const form = document.getElementById('rateForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Simple form validation
+      const phone = document.getElementById('phone').value;
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      if (isValidPhoneNumber(phone) && name.trim() && isValidEmail(email.trim())) {
+        // Here you would typically send the data to a server
+        // For this demo, we'll just show a success message
+        const message = document.getElementById('formMessage');
+        message.classList.remove('hidden');
+        form.submit();
+
+        // Hide message after 3 seconds
+        setTimeout(() => {
+          message.classList.add('hidden');
+        }, 3000);
+      } else {
+        e.preventDefault();
+        alert('A valid phone number and email is required');
+      }
+    });
+  </script>
 </body>
+
 </html>
